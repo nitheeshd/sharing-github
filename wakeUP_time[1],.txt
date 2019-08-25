@@ -1,0 +1,50 @@
+print("*************************WAKEUPTIMECALCULATOR****************************\n")
+
+print("Please Enter 1 if you want to enter the sleeping time and know WakeUp time")
+print("Please Enter 0 if you want to enter the wakeup time and know your sleeping time")
+
+option = int(input("Enter the option: "))
+Hour  = int(input("Enter Hours:"))
+minute = int(input("Enter minutes:"))
+second = int(input("Enter Seconds:"))
+
+if(0<=Hour<24 and 0<=minute<60 and 0<=second<60):
+        if(option==1):
+                print("You should try to wakeup at ",end="")    
+                
+                for i in range(1,5):
+                    Hour = Hour+1
+                    minute+=30
+                    if(minute>=60):
+                        minute=minute%60
+                        Hour=Hour+1
+                        Hour = Hour%24
+                    print(Hour,":",minute, "or ", end="")
+                    
+        
+        if(option==0):
+            Hour = Hour-6  
+            if(Hour<0):#For Calculating When to sleep.
+               Hour = Hour+24
+            print("You should try to sleep at ",end="")
+            for i in range(1,5):
+                    if(minute>=60):
+                        minute=minute%60
+                        Hour=Hour+1
+                        Hour = Hour%24
+                    print(Hour,":",minute, "or ", end="")
+                    Hour+=1
+                    Hour=Hour%24
+                    minute+=30
+           #These row is to just print last timing. 
+            if(minute>=60):
+                minute=minute%60
+                Hour=Hour+1 
+            print(Hour,":",minute, end="")    
+        
+        else:
+              print("Please enter the correct option")      
+else:
+    print("Please renter the time")
+            
+      
