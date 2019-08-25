@@ -45,6 +45,6 @@ if(0<=Hour<24 and 0<=minute<60 and 0<=second<60):
         else:
               print("Please enter the correct option")      
 else:
-    print("Please renter the time")
+    print("Please renter the time")# ot give
             
       
