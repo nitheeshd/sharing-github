@@ -1,1 +1,2 @@
-# sharing-github
+#wake
+X=int(input("givey")
